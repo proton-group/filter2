@@ -78,20 +78,18 @@ namespace
     }
 }
 
-int mfilter(std::ifstream& in)
+int mfilter(std::stringstream& in, std::stringstream& out)
 {
     std::string buf;
     std::string data[4];
-    if (in.is_open())
+    int i = 0;
+    while(std::getline(in, buf))
     {
-        int i = 0;
-        while(std::getline(in, buf))
-        {
-            data[i] = buf;
-            i++;
-        }
+        data[i] = buf;
+        i++;
     }
-    in.close();
+    
+    //in >> data[0] >> data[1] >> data[2] >> data[3];
     _mfilter(data[0], data[3], std::stoi(data[1]), std::stoi(data[2]));
     return 0;
 }
