@@ -4,4 +4,6 @@
 #include <iostream>
 #include <sstream>
 
-int mfilter(std::stringstream& in, std::stringstream& out);
+void filter_from_stream(std::stringstream& in, std::stringstream& out);
+
+void filter_from_image(bmp::Bitmap& image, int squadSize, int limit);

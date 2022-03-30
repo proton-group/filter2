@@ -23,5 +23,6 @@ int main(int argc, char* argv[])
         }
     }
     in.close();
-    return mfilter(in_str, out_str);
+    filter_from_stream(in_str, out_str);
+    return;
 }

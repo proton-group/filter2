@@ -3,6 +3,6 @@ project(main)
 include_directories(${CMAKE_SOURCE_DIR}/include)
 add_subdirectory(src)
 
-add_executable(main main.cpp)
+add_executable(main test.cpp)
 
-target_link_libraries(main filter)
+target_link_libraries(main filter gtest)
